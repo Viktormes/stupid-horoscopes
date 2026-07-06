@@ -255,8 +255,13 @@ function seededRandom(seed) {
   return () => (s = (s * 48271) % 2147483647) / 2147483647;
 }
 
-function pick(arr, rnd) {
-  return arr[Math.floor(rnd() * arr.length)];
+function shuffleArray(arr, rnd) {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
 }
 
 function getDagensData() {
@@ -264,11 +269,10 @@ function getDagensData() {
   const seed = hashString(idag);
   const rnd = seededRandom(seed);
 
-  const farger = [...turFarger];
-  for (let i = farger.length - 1; i > 0; i--) {
-    const j = Math.floor(rnd() * (i + 1));
-    [farger[i], farger[j]] = [farger[j], farger[i]];
-  }
+  const farger = shuffleArray(turFarger, rnd);
+  const textPools = Object.fromEntries(
+      Object.entries(horoscopeTextBanks).map(([key, texts]) => [key, shuffleArray(texts, rnd)])
+  );
 
   const tider = [];
   while (tider.length < 12) {
@@ -276,23 +280,23 @@ function getDagensData() {
     if (!tider.includes(tid)) tider.push(tid);
   }
 
-  return { farger, tider };
+  return { farger, textPools, tider };
 }
 
 function genereraDagshoroskop(tecken) {
-  const { farger, tider } = getDagensData();
+  const { farger, textPools, tider } = getDagensData();
   const teckenIndex = stjarntecken.indexOf(tecken);
   const idagStr = new Date().toISOString().slice(0, 10);
   const textRnd = seededRandom(hashString(`${idagStr}-${tecken}`));
 
   return {
     text: [
-      pick(horoscopeTextBanks.inledningar, textRnd),
-      pick(horoscopeTextBanks.fokus, textRnd),
-      pick(horoscopeTextBanks.rad, textRnd),
-      pick(horoscopeTextBanks.konsekvens, textRnd),
-      pick(horoscopeTextBanks.absurditeter, textRnd),
-      pick(horoscopeTextBanks.avslutningar, textRnd),
+      textPools.inledningar[teckenIndex],
+      textPools.fokus[teckenIndex],
+      textPools.rad[teckenIndex],
+      textPools.konsekvens[teckenIndex],
+      textPools.absurditeter[teckenIndex],
+      textPools.avslutningar[teckenIndex],
     ].join(" "),
     turFarg: farger[teckenIndex],
     turNummer: 1 + Math.floor(textRnd() * 99),
