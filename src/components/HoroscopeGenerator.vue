@@ -50,7 +50,6 @@
               </div>
 
               <label class="flex flex-col gap-2 text-sm text-slate-300">
-                Ditt tecken
                 <select
                     v-model="valtTecken"
                     class="h-11 rounded-lg border border-slate-700 bg-slate-950/70 px-3 text-slate-100 outline-none hover:ring-1 hover:ring-slate-400"
