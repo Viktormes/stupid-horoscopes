@@ -113,10 +113,7 @@
               Horrific Horoscopes gör dagliga horoskop av slumpade textbanker, sparsam astrologisk attityd och vardaglig administrativ oro.
             </p>
             <p>
-              Varje stjärntecken får samma horoskop hela dagen. Nästa dag blandas Kosmos om igen.
-            </p>
-            <p>
-              Texterna är underhållning. De ska inte användas för medicinska, juridiska, ekonomiska eller emotionellt dyra beslut.
+              Texterna är underhållning. De ska inte användas för medicinska, juridiska, ekonomiska eller emotionellt kostsamma beslut.
             </p>
           </div>
         </article>
