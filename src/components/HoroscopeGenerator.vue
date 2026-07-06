@@ -128,13 +128,19 @@
           <h1 class="mt-1 text-3xl font-semibold tracking-tight text-slate-50">Privacy policy</h1>
           <div class="mt-5 space-y-4 leading-7 text-slate-300">
             <p>
-              Appen sparar ditt valda stjärntecken i webbläsarens localStorage så att samma tecken öppnas nästa gång.
+              Horrific Horoscopes sparar ditt valda stjärntecken i webbläsarens localStorage så att samma tecken öppnas nästa gång.
             </p>
             <p>
-              Just nu skickas ingen personlig information till någon server från den här funktionen.
+              Just nu skickas ingen personlig information till någon server från den här funktionen. Horoskopet skapas lokalt i webbläsaren från appens textbanker.
             </p>
             <p>
-              Annonsplatserna är förberedda men visar inga riktiga annonser än. Om riktiga annonser aktiveras senare behöver den här sidan uppdateras med information om annonsleverantör, cookies och samtycke.
+              Webbplatsen har en förberedd annonsplats, men visar inga riktiga annonser än. När annonser aktiveras kan annonsleverantörer använda cookies eller liknande tekniker för att mäta annonser, begränsa upprepning och visa relevanta annonser.
+            </p>
+            <p>
+              Om Google AdSense eller en liknande annonstjänst används kommer besökare i EU/EES, Storbritannien och Schweiz att få möjlighet att hantera samtycke via en godkänd samtyckeslösning innan personanpassade annonser visas.
+            </p>
+            <p>
+              Den här policyn kommer att uppdateras innan riktiga annonser, analysverktyg eller andra externa tjänster aktiveras.
             </p>
           </div>
         </article>
