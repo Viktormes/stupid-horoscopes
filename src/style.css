@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    background: #020617;
+}
+
+body {
+    margin: 0;
+}
+
+.ad-slot {
+    display: grid;
+    min-height: 96px;
+    place-items: center;
+    border: 1px dashed rgba(148, 163, 184, 0.35);
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.42);
+    color: rgba(203, 213, 225, 0.65);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+}
+
+.ad-slot-tall {
+    min-height: 420px;
+}
+
 .nebula {
     position: absolute;
     width: 60vmax;
