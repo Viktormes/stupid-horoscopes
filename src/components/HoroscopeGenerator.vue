@@ -10,11 +10,16 @@
     <header class="relative z-10 border-b border-slate-800/80 bg-slate-950/70 backdrop-blur">
       <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between">
         <button
-            class="w-fit text-left text-xl font-semibold tracking-tight text-slate-50"
+            class="w-fit rounded-lg text-left transition hover:opacity-85"
             type="button"
             @click="activePage = 'home'"
         >
-          Stupid Horoscopes
+          <img
+              alt=""
+              class="h-12 w-12 rounded-lg object-cover"
+              src="/horrific-horoscopes-mark.png"
+          />
+          <span class="sr-only">Horrific Horoscopes</span>
         </button>
 
         <nav class="flex flex-wrap gap-2" aria-label="Huvudnavigation">
@@ -105,7 +110,7 @@
           <h1 class="mt-1 text-3xl font-semibold tracking-tight text-slate-50">Horoskop med tveksam precision</h1>
           <div class="mt-5 space-y-4 leading-7 text-slate-300">
             <p>
-              Stupid Horoscopes gör dagliga horoskop av slumpade textbanker, sparsam astrologisk attityd och vardaglig administrativ oro.
+              Horrific Horoscopes gör dagliga horoskop av slumpade textbanker, sparsam astrologisk attityd och vardaglig administrativ oro.
             </p>
             <p>
               Varje stjärntecken får samma horoskop hela dagen. Nästa dag blandas Kosmos om igen.
@@ -141,7 +146,7 @@
     </main>
 
     <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/70 px-4 py-5 text-center text-xs text-slate-500 backdrop-blur">
-      © 2026 Stupid Horoscopes. Kosmos tar inget ansvar.
+      © 2026 Horrific Horoscopes. Kosmos tar inget ansvar.
     </footer>
   </div>
 </template>
